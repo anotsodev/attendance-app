@@ -13,7 +13,16 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
 Route::get('/attendance', function () {
     return view('attendance');
 })->name('attendance');
+
+Route::get('/events', function () {
+    return view('events');
+})->name('events');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
