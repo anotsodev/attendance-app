@@ -7,9 +7,28 @@
 <div class="col-md-12">
 	<div class="page-header">
 		<h1 id="navbar">Student Attendance List</h1>
-		<h4 id="navbar">{{ $eventname->name }}</h4>
+		<h3 id="navbar">{{ $eventname->name }}</h3>
 	</div>
 	<div class="col-md-12">
+			<form class="form-horizontal" method="GET">
+				{{ csrf_field() }}
+				<input value="{{ app('request')->input('event_id') }}" hidden="" name="event_id">
+				<fieldset>
+					<div class="form-group">
+						<div class="col-md-6"></div>
+						<label for="class_code" class="col-md-2 control-label ">Select Class Code</label>
+						<div class="col-md-4">
+							<select id="class_code" class="form-control" name="class_code">
+								@foreach ($allclasscodes as $classcode)
+								<option value="{{ $classcode->id }}"> {{ $classcode->class_code_no }} </option>
+								@endforeach
+								<option value="ALL"> All </option>
+							</select>
+						</div>
+						<button type="submit" class="btn btn-primary pull-right">Filter</button>
+					</div>
+				</fieldset>
+			</form>
 			<table class="table table-striped table-hover bs-component">
 				<thead>
 					<tr>

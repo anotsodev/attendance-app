@@ -35,22 +35,22 @@ class SystemController extends Controller{
     // Attendance List
     public function getClassCodes() {
     	$classcodes = DB::table('classcodes')
-    				->leftJoin('events', 'classcodes.event_id','=','events.event_id')
     				->paginate(6);
-    	
-    	return view('classcodes',['classcodes'=>$classcodes]);
+        $allclasscodes = DB::table('classcodes')
+                    ->get();
+    	return view('classcodes',['classcodes'=>$classcodes,'allclasscodes'=>$allclasscodes]);
     }
 
     public function getStudentAttendance(Request $request) {
     	$students = DB::table('studentattendance')
     				->leftJoin('classcodes','studentattendance.class_code','=','classcodes.id')
-    				->where('studentattendance.class_code','=',$request->input('classcode_id'))
-    				->where('studentattendance.event_id','=',$request->input('event'))
+    				->where('studentattendance.event_id','=',$request->input('event_id'))
     				->paginate(20);
     	$eventname = DB::table('events')
-    				->where('event_id','=',$request->input('event'))
+    				->where('event_id','=',$request->input('event_id'))
     				->first();
-    	
-    	return view('studentattendance',['students'=>$students,'eventname'=>$eventname]);
+    	$allclasscodes = DB::table('classcodes')
+                    ->get();
+    	return view('studentattendance',['students'=>$students,'eventname'=>$eventname,'allclasscodes'=>$allclasscodes]);
     }
 }

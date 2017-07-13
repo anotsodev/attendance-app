@@ -17,10 +17,18 @@ Route::get('/', function () {
 
 Route::get('/events', 'SystemController@getEvents')->name('events');
 
-Route::get('/classcodes','SystemController@getClassCodes')->name('classcodes');
-
 Route::get('/studentattendance','SystemController@getStudentAttendance')->name('studentattendance');
+
+Route::get('/classcodes','SystemController@getClassCodes')->name('classcodes'); 
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/studentattendancesheet', function() {
+	return view('studentattendancesheet');
+})->name('studentattendancesheet');
+
+Route::get('/visitorattendancesheet', function() {
+	return view('visitorattendancesheet');
+})->name('visitorattendancesheet');

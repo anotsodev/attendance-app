@@ -30,27 +30,33 @@
 				</fieldset>
 			</form>
 		</div>
-		<div class="col-md-12">
-			<table class="table table-striped table-hover bs-component">
-				<thead>
-					<tr>
-						<th>Event Name</th>
-						<th>School Year</th>
-						<th>Action</th>
-					</tr>
-				</thead>
-				<tbody>
-					@foreach ($events as $event)
-					<tr>
-						<td> {{ $event->name }} </td>
-						<td> {{ $event->school_year }} </td>
-						<td> Link Here </td>
-					</tr>
-					@endforeach
-				</tbody>
-			</table>
-			{{ $events->links() }}
+		<div class="row">
+		<div class="bs-component">
+			@foreach ($events as $event)
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><b>Event:</b> {{ $event->name }} <span class="pull-right"><b>School Year:</b> {{ $event->school_year }}</span></div>
+					<div class="panel-body">
+						<p>{{ $event->event_description }}</p>
+					</div>
+					<div class="col-md-offset-7">
+					<div class="btn-group">
+						<a href="" data-target="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							Attendance
+							<span class="caret"></span>
+							<div class="ripple-container"></div>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="{{ route('studentattendancesheet') }}">Add Attendence</a></li>
+							<li><a href="{{ route('studentattendance',['event_id'=>$event->event_id]) }}">View Attendance Record</a></li>
+						</ul>
+					</div>
+					</div>
+				</div>
+			</div>
+			@endforeach
 		</div>
+	</div>
 	</div>
 	<div class="row">
 		<button type="button" class="btn btn-primary btn-raised btn-lg pull-right" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Add New Event</button>

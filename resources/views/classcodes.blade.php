@@ -16,7 +16,7 @@
 				<label for="school_year" class="col-md-2 control-label ">Select School Year</label>
 				<div class="col-md-4">
 					<select id="school_year" class="form-control" name="school_year">
-						@foreach ($classcodes as $classcode)
+						@foreach ($allclasscodes as $classcode)
 							<option value="{{ $classcode->school_year }}"> {{ $classcode->school_year }} </option>
 						@endforeach
 						<option value="ALL"> All </option>
@@ -30,14 +30,11 @@
 		<div class="bs-component">
 			@foreach ($classcodes as $classcode)
 			<div class="col-md-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">Class Code: {{ $classcode->class_code_no }} - School Year: {{ $classcode->school_year }}</div>
+				<div class="panel panel-primary">
+					<div class="panel-heading"><b>Class Code:</b> {{ $classcode->class_code_no }} <span class="pull-right"><b>School Year:</b> {{ $classcode->school_year }}</span></div>
 					<div class="panel-body">
-						<b>Event: </b> {{ $classcode->name }}
-						<br>
 						<b>Instructor:</b> {{ $classcode->instructor_full_name }}
 					</div>
-					<a href="{{ route('studentattendance', ['classcode'=> $classcode->class_code_no, 'classcode_id'=>$classcode->id,'school_year'=>$classcode->school_year,'event'=>$classcode->event_id]) }}"><button class="btn btn-primary">View Attendance Record</button></a>
 				</div>
 			</div>
 			@endforeach
