@@ -8,7 +8,8 @@
 		<meta name="description" content="Demo of Material design portfolio template by TemplateFlip.com."/>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+		<!-- <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet"> -->
+		<link href="{{ asset('css/material.indigo-pink.min.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 		<link href="{{ asset('css/bootstrap-material-design.css') }}" rel="stylesheet">
@@ -51,8 +52,7 @@
 					</footer>
 				</main>
 				<!-- script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script> -->
-				<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-				<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+				<script src="{{ asset('js/jquery-1.10.2.min.js') }}"></script>
 				<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 				<script src="{{ asset('js/material.min.js') }}"></script>
 				<script src="{{ asset('js/material.js') }}"></script>
@@ -64,5 +64,5 @@
 					
 				</script>
 			</div>
-		</body>
-	</html>
+	</body>
+</html>
