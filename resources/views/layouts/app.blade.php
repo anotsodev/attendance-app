@@ -24,7 +24,7 @@
 					<div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
 						<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
 							<a class="mdl-navigation__link" href="{{ route('home') }}">Home</a>
-							<a class="mdl-navigation__link" href="{{ route('attendance') }}">Attendance List</a>
+							<a class="mdl-navigation__link" href="{{ route('classcodes') }}">Class Code List</a>
 							<a class="mdl-navigation__link" href="{{ route('events') }}">Event List</a>
 							<a class="mdl-navigation__link" href="{{ route('about') }}">About</a>
 						</nav>
@@ -33,7 +33,7 @@
 				<div class="mdl-layout__drawer mdl-layout--small-screen-only">
 					<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
 						<a class="mdl-navigation__link" href="{{ route('home') }}">Home</a>
-						<a class="mdl-navigation__link" href="{{ route('attendance') }}">Attendance List</a>
+						<a class="mdl-navigation__link" href="{{ route('classcodes') }}">Class Code List</a>
 						<a class="mdl-navigation__link" href="{{ route('events') }}">Event List</a>
 						<a class="mdl-navigation__link" href="{{ route('about') }}">About</a>
 					</nav>

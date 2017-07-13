@@ -15,13 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/attendance', function () {
-    return view('attendance');
-})->name('attendance');
+Route::get('/events', 'SystemController@getEvents')->name('events');
 
-Route::get('/events', function () {
-    return view('events');
-})->name('events');
+Route::get('/classcodes','SystemController@getClassCodes')->name('classcodes');
+
+Route::get('/studentattendance','SystemController@getStudentAttendance')->name('studentattendance');
 
 Route::get('/about', function () {
     return view('about');
