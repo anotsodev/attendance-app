@@ -7,7 +7,7 @@
 <div class="col-md-12">
 	<div class="page-header">
 		<h1 id="navbar">Student Attendance List</h1>
-		<h3 id="navbar">{{ $eventname->name }}</h3>
+		<h3 id="navbar">Event: {{ $eventname->name }}</h3>
 	</div>
 	<div class="col-md-12">
 			<form class="form-horizontal" method="GET">

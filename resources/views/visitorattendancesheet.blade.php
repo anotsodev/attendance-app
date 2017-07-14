@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Visitor')
+@section('title', 'Visitors Attendance Sheet')
 @section('header')
 @parent
 @endsection
