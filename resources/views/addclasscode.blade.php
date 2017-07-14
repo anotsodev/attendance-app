@@ -14,7 +14,7 @@
                 <div class="form-group">
                   <label for="class_code" class="col-md-2 control-label">Class Code</label>
                   <div class="col-md-10">
-                     <input type="text" class="form-control" id="class_code" name="class_code" placeholder="Class Code" required="">
+                     <input type="text" class="form-control" id="class_code" name="class_code" value="{{ date('Y') }} - {{ date('Y')+1 }}" placeholder="Class Code" readonly="" required="">
                   </div>
                </div>
                <div class="form-group">

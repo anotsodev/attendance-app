@@ -27,8 +27,7 @@
                 <div class="form-group">
                   <label for="school_year" class="col-md-2 control-label">School Year</label>
                   <div class="col-md-10">
-                     <input type="text" class="form-control" id="school_year" name="school_year" placeholder="School Year" required="" 
-                     >
+                     <input type="text" class="form-control" id="school_year" name="school_year" value="{{ date('Y') }} - {{ date('Y')+1 }}" placeholder="School Year" readonly="" required="">
                   </div>
                </div>
             <div class="form-group">

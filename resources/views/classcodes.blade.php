@@ -45,7 +45,8 @@
 				@foreach ($classcodes as $classcode)
 				<div class="col-md-6">
 					<div class="panel panel-primary">
-						<div class="panel-heading"><b>Class Code:</b> {{ $classcode->class_code_no }} <span class="pull-right"><b>School Year:</b> {{ $classcode->school_year }}</span></div>
+						<div class="panel-heading"><b>Class Code:</b> {{ $classcode->class_code_no }} <span class="pull-right"><b>School Year:</b> {{ $classcode->school_year }}</span>
+						</div>
 						<div class="panel-body">
 							<b>Instructor:</b> {{ $classcode->instructor_full_name }}
 						</div>
