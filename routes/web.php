@@ -19,16 +19,31 @@ Route::get('/events', 'SystemController@getEvents')->name('events');
 
 Route::get('/studentattendance','SystemController@getStudentAttendance')->name('studentattendance');
 
+Route::get('/visitorattendance','SystemController@getVisitorAttendance')->name('visitorattendance');
+
 Route::get('/classcodes','SystemController@getClassCodes')->name('classcodes'); 
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-Route::get('/studentattendancesheet', function() {
-	return view('studentattendancesheet');
-})->name('studentattendancesheet');
+Route::get('/studentattendancesheet','SystemController@studentAttendanceSheet')->name('studentattendancesheet');
 
 Route::get('/visitorattendancesheet', function() {
 	return view('visitorattendancesheet');
 })->name('visitorattendancesheet');
+
+Route::post('/insertstudentattendance','SystemController@insertStudentAttendance');
+
+Route::post('/insertvisitorattendance','SystemController@insertVisitorAttendance');
+
+Route::get('/addevent', function(){
+	return view('addevent');
+})->name('addevent');
+
+Route::get('/addclasscode', function(){
+	return view('addclasscode');
+})->name('addclasscode');
+
+Route::post('/insertevent','SystemController@insertEvent');
+Route::post('/insertclasscode','SystemController@insertClassCode');
