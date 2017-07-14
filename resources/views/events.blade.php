@@ -49,10 +49,11 @@
 						<div class="panel-body">
 							<p>{{ $event->event_description }}</p>
 						</div>
-						<div class="">
-							<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-primary">Add Attendance</button></a>
-							<div class="btn-group">
-								<a href="" data-target="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						<div class="row">
+							<div class="col-md-12">
+							<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-primary pull-right">Add Attendance</button></a>
+							<div class="btn-group pull-right">
+								<a href="" data-target="#" class="btn btn-primary dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
 									Attendance List
 									<span class="caret"></span>
 									<div class="ripple-container"></div>
@@ -61,6 +62,7 @@
 									<li><a href="{{ route('studentattendance',['event_id'=>$event->event_id]) }}">View Students Attendance List</a></li>
 									<li><a href="{{ route('visitorattendance',['event_id'=>$event->event_id]) }}">View Visitors Attendance List</a></li>
 								</ul>
+							</div>
 							</div>
 						</div>
 					</div>
