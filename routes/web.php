@@ -20,8 +20,7 @@ Route::get('/events', 'SystemController@getEvents')->name('events');
 Route::get('/studentattendance','SystemController@getStudentAttendance')->name('studentattendance');
 
 Route::get('/visitorattendance','SystemController@getVisitorAttendance')->name('visitorattendance');
-
-Route::get('/classcodes','SystemController@getClassCodes')->name('classcodes'); 
+ 
 
 Route::get('/about', function () {
     return view('about');

@@ -16,14 +16,9 @@
 				<fieldset>
 					<div class="form-group">
 						<div class="col-md-6"></div>
-						<label for="class_code" class="col-md-2 control-label ">Select Class Code</label>
+						<label for="class_code" class="col-md-2 control-label ">Search Class Code</label>
 						<div class="col-md-4">
-							<select id="class_code" class="form-control" name="class_code">
-								@foreach ($allclasscodes as $classcode)
-								<option value="{{ $classcode->id }}"> {{ $classcode->class_code_no }} </option>
-								@endforeach
-								<option value="ALL"> All </option>
-							</select>
+							<input type="text" class="form-control" name="class_code" placeholder="Search Class Code">
 						</div>
 						<button type="submit" class="btn btn-primary pull-right">Filter</button>
 					</div>
@@ -39,18 +34,20 @@
 						<th>Course</th>
 						<th>Year</th>
 						<th>Date Attended</th>
+						<th>Ticket Number</th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach ($students as $student)
 					<tr>
-						<td> {{ $student->class_code_no }} </td>
+						<td> {{ $student->class_code }} </td>
 						<td> {{ $student->student_id }} </td>
 						<td> {{ $student->first_name }} </td>
 						<td> {{ $student->last_name }} </td>
 						<td> {{ $student->course }} </td>
 						<td> {{ $student->year }} </td>
 						<td> {{ $student->date_attended }} </td>
+						<td> {{ $student->ticket_no }} </td>
 					</tr>
 					@endforeach
 				</tbody>

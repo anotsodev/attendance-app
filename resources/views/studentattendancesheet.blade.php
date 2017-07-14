@@ -7,7 +7,7 @@
 <div class="col-md-12">
    <div class="row">
       <h3 class="text-danger">Visitors Attendance Here
-      <a href="{{ route('visitorattendancesheet',['event_id'=>app('request')->input('event_id'),'event_name'=>app('request')->input('event_name')]) }}"><button class="btn btn-primary">Visitor Attendance</button></a>
+      <a href="{{ route('visitorattendancesheet',['event_id'=>app('request')->input('event_id'),'event_name'=>app('request')->input('event_name')]) }}"><button class="btn btn-danger btn-raised">Visitor Attendance</button></a>
       </h3>
    </div>
    <div class="row">
@@ -25,14 +25,9 @@
                </div>
                <input type="text" class="form-control" id="event_id" name="event_id" value="{{ app('request')->input('event_id') }}" hidden="">
                <div class="form-group">
-                  <label for="classcode" class="col-md-2 control-label">Class Code</label>
+                  <label for="class_code" class="col-md-2 control-label">Class Code</label>
                   <div class="col-md-10">
-                     <select id="classcode" class="form-control" name="class_code" required="">
-                        <option value="">Select Class Code</option>
-                        @foreach($classcodes as $classcode)
-                        <option value="{{ $classcode->id }}">{{ $classcode->class_code_no }}</option>
-                        @endforeach
-                     </select>
+                     <input type="text" class="form-control" id="class_code" name="class_code" placeholder="Class Code">
                   </div>
                </div>
                <div class="form-group">
@@ -68,6 +63,12 @@
                   <div class="col-md-5">
                      <input type="number" class="form-control" id="year" name="year" placeholder="Year" required=""
                      >
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label for="ticket_no" class="col-md-2 control-label">Ticket Number</label>
+                  <div class="col-md-10">
+                     <input type="text" class="form-control" id="ticket_no" name="ticket_no" placeholder="Optional">
                   </div>
                </div>
                <div class="form-group">
