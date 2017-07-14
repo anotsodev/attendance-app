@@ -50,9 +50,9 @@
 							<p>{{ $event->event_description }}</p>
 						</div>
 						<div class="">
-							<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-danger">Add Attendance</button></a>
+							<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-primary">Add Attendance</button></a>
 							<div class="btn-group">
-								<a href="" data-target="#" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<a href="" data-target="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 									Attendance List
 									<span class="caret"></span>
 									<div class="ripple-container"></div>
