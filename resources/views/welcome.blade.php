@@ -8,14 +8,30 @@
 
 @section('content')
 <div class="col-md-12">
-   <div class="page-header">
-      <h1 id="navbar">Home</h1>
-   </div>
    <div class="row">
-      <div class="col-md-12">
-         <div class="bs-component">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="page-header">
+         <h1 id="navbar">Current Event</h1>
+      </div>
+      <div class="bs-component">
+         @foreach ($currentevent as $event)
+         <div class="">
+            <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+               <div class="mdl-card__title"><h1 class="mdl-card__title-text">Event: {{ $event->name }}</h1></div>
+               <div class="mdl-card__media"><img class="article-image" src="img/events.jpg" border="0" alt="About"></div>
+               <div class="col-md-12">
+                  <h3 class="">Description: </h3>
+                  <p>{{ $event->event_description }}</p>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="mdl-card__actions mdl-card--border">
+                        <a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-danger btn-lg pull-right">Attendance Sheet</button></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
+         @endforeach
       </div>
    </div>
    <!-- <div class="well bs-component">

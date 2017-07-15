@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'SystemController@getCurrentEvent')->name('home');
 
 Route::get('/events', 'SystemController@getEvents')->name('events');
 

@@ -52,20 +52,6 @@
                   </div>
                </div>
                <div class="form-group">
-                  <label for="course" class="col-md-2 control-label">Course</label>
-                  <div class="col-md-5">
-                     <input type="text" class="form-control" id="course" name="course" placeholder="Course" required="" 
-                     >
-                  </div>
-               </div>
-               <div class="form-group">
-                  <label for="year" class="col-md-2 control-label">Year</label>
-                  <div class="col-md-5">
-                     <input type="number" class="form-control" id="year" name="year" placeholder="Year" required=""
-                     >
-                  </div>
-               </div>
-               <div class="form-group">
                   <label for="ticket_no" class="col-md-2 control-label">Ticket Number</label>
                   <div class="col-md-10">
                      <input type="text" class="form-control" id="ticket_no" name="ticket_no" placeholder="Optional">

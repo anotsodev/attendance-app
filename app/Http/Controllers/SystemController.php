@@ -34,6 +34,11 @@ class SystemController extends Controller{
     						->get();
     	return view('events',['events' => $events, 'allevents'=>$allevents]);
     }
+
+    public function getCurrentEvent(){
+        $currentevent = DB::table('events')->orderBy('event_id','desc')->limit(1)->get();
+        return view('welcome',['currentevent'=>$currentevent]);
+    }
     // Attendance List
 
     public function getStudentAttendance(Request $request) {
@@ -81,11 +86,9 @@ class SystemController extends Controller{
         $student_id = $request->input('student_id');
         $first_name = $request->input('first_name');
         $last_name = $request->input('last_name');
-        $course = $request->input('course');
-        $year = $request->input('year');
         $ticket_no = $request->input('ticket_no');
         DB::table('studentattendance')->insert(
-            ['event_id'=>$event_id,'class_code'=>$class_code,'student_id'=>$student_id,'first_name'=>$first_name,'last_name'=>$last_name,'course'=>$course,'year'=>$year,'date_attended'=>$date_attended,'ticket_no'=>$ticket_no]
+            ['event_id'=>$event_id,'class_code'=>$class_code,'student_id'=>$student_id,'first_name'=>$first_name,'last_name'=>$last_name,'date_attended'=>$date_attended,'ticket_no'=>$ticket_no]
         );
         $request->session()->flash('status', "Attendance for $first_name $last_name has been saved.");
         return redirect()->route('events');

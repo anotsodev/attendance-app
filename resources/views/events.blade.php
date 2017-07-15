@@ -44,25 +44,31 @@
 			<div class="bs-component">
 				@foreach ($events as $event)
 				<div class="">
-					<div class="panel panel-primary">
-						<div class="panel-heading"><b>Event:</b> {{ $event->name }} <span class="pull-right"><b>School Year:</b> {{ $event->school_year }}</span></div>
-						<div class="panel-body">
+					<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+						<div class="col-md-12">
+							<h3 class="">Event: {{ $event->name }} <span class="pull-right"> School Year: {{ $event->school_year }}</span></h3>
+						</div>
+						<div class="mdl-card__media"><img class="article-image" src="img/events.jpg" border="0" alt="About"></div>
+						<div class="col-md-12">
+							<h3 class="">Description: </h3>
 							<p>{{ $event->event_description }}</p>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-							<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-primary pull-right">Add Attendance</button></a>
-							<div class="btn-group pull-right">
-								<a href="" data-target="#" class="btn btn-primary dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
-									Attendance List
-									<span class="caret"></span>
-									<div class="ripple-container"></div>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="{{ route('studentattendance',['event_id'=>$event->event_id]) }}">View Students Attendance List</a></li>
-									<li><a href="{{ route('visitorattendance',['event_id'=>$event->event_id]) }}">View Visitors Attendance List</a></li>
-								</ul>
-							</div>
+								<div class="mdl-card__actions mdl-card--border">
+								<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-primary pull-right">Attendance Sheet</button></a>
+								<div class="btn-group pull-right">
+									<a href="" data-target="#" class="btn btn-primary dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+										Attendance List
+										<span class="caret"></span>
+										<div class="ripple-container"></div>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a href="{{ route('studentattendance',['event_id'=>$event->event_id]) }}">View Students Attendance List</a></li>
+										<li><a href="{{ route('visitorattendance',['event_id'=>$event->event_id]) }}">View Visitors Attendance List</a></li>
+									</ul>
+								</div>
+								</div>
 							</div>
 						</div>
 					</div>
