@@ -5,12 +5,12 @@
 @endsection
 @section('content')
 <div class="col-md-12">
-	<div class="page-header">
+	<div class="page-header no-print">
 		<h1 id="navbar">Student Attendance List</h1>
 		<h3 id="navbar">Event: {{ $eventname->name }}</h3>
 	</div>
 	<div class="col-md-12">
-			<form class="form-horizontal" method="GET">
+			<form class="form-horizontal no-print" method="GET">
 				{{ csrf_field() }}
 				<input value="{{ app('request')->input('event_id') }}" hidden="" name="event_id">
 				<fieldset>

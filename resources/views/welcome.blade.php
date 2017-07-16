@@ -8,6 +8,15 @@
 
 @section('content')
 <div class="col-md-12">
+   @if(session()->has('status'))
+	<div class="alert alert-dismissible alert-success">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<h4>Success</h4>
+		<p>
+			{{ session()->get('status') }}
+		</p>
+	</div>
+	@endif
    <div class="row">
       <div class="page-header">
          <h1 id="navbar">Current Event</h1>

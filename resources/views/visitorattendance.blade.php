@@ -5,7 +5,7 @@
 @endsection
 @section('content')
 <div class="col-md-12">
-	<div class="page-header">
+	<div class="page-header no-print">
 		<h1 id="navbar">Visitors Attendance List</h1>
 		<h3 id="navbar">{{ $eventname->name }}</h3>
 	</div>
@@ -26,6 +26,7 @@
 				@endforeach
 			</tbody>
 		</table>
+		<button class="btn btn-primary btn-raied pull-right no-print" onclick="window.print()">Print Attendance</button>
 		{{ $visitors->links() }}
 	</div>
 </div>

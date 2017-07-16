@@ -91,7 +91,7 @@ class SystemController extends Controller{
             ['event_id'=>$event_id,'class_code'=>$class_code,'student_id'=>$student_id,'first_name'=>$first_name,'last_name'=>$last_name,'date_attended'=>$date_attended,'ticket_no'=>$ticket_no]
         );
         $request->session()->flash('status', "Attendance for $first_name $last_name has been saved.");
-        return redirect()->route('events');
+        return redirect()->route('home');
     }
 
     public function insertVisitorAttendance(Request $request) {
@@ -103,7 +103,7 @@ class SystemController extends Controller{
                 ['event_id'=>$event_id,'full_name'=>$full_name,'date_attended'=>$date_attended,'ticket_no'=>$ticket_no]
             );
         $request->session()->flash('status', "Attendance for $full_name has been saved.");
-        return redirect()->route('events');
+        return redirect()->route('home');
 
     }
 
