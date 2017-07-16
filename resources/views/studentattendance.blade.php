@@ -48,6 +48,7 @@
 					@endforeach
 				</tbody>
 			</table>
+			<button class="btn btn-primary btn-raied pull-right no-print" onclick="window.print()">Print Attendance</button>
 			{{ $students->links() }}
 		</div>
 </div>
