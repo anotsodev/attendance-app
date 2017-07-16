@@ -25,7 +25,8 @@
                <div class="row">
                   <div class="col-md-12">
                      <div class="mdl-card__actions mdl-card--border">
-                        <a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-danger btn-lg pull-right">Attendance Sheet</button></a>
+                        <br>
+                        <a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-danger btn-raised btn-lg pull-right">Attendance Sheet</button></a>
                      </div>
                   </div>
                </div>

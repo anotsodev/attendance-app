@@ -52,15 +52,15 @@
 						<div class="mdl-card__media"><img class="article-image" src="img/events.jpg" border="0" alt="About"></div>
 						<div class="col-md-12">
 							<h3 class="">Description: </h3>
-							<p>{{ $event->event_description }}</p>
+							<p>{{ $event->event_description}}</p>
 						</div>
 							
 							<div class="col-md-12">
 								<div class="mdl-card__actions mdl-card--border">
 								<br>
-									<a href="{{ route('studentattendance',['event_id'=>$event->event_id]) }}" class="btn btn-primary btn-raised">View Students Attendance List</a>
-									<a href="{{ route('visitorattendance',['event_id'=>$event->event_id]) }}" class="btn btn-primary btn-raised">View Visitors Attendance List</a>
-									<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-primary btn-raised">Attendance Sheet</button></a>
+									<a href="{{ route('studentattendance',['event_id'=>$event->event_id]) }}" class="btn btn-danger btn-raised">View Students Attendance List</a>
+									<a href="{{ route('visitorattendance',['event_id'=>$event->event_id]) }}" class="btn btn-danger btn-raised">View Visitors Attendance List</a>
+									<a href="{{ route('studentattendancesheet',['event_id'=>$event->event_id, 'event_name'=>$event->name]) }}"><button class="btn btn-danger btn-raised">Attendance Sheet</button></a>
 								</div>
 							</div>
 						
