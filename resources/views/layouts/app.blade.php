@@ -28,7 +28,7 @@
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			<header class="mdl-layout__header mdl-layout__header--waterfall site-header no-print">
 				<div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
-					<div class="site-logo"></div><span class="site-description">Saint Louis University - NSTP - Attendance System</span></span></div>
+					<div class="site-logo"></div><span class="site-description">Saint Louis University - NSTP</span></span></div>
 					<div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
 						<nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
 							<a class="mdl-navigation__link" href="{{ route('home') }}">Home</a>

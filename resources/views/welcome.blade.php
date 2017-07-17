@@ -22,6 +22,9 @@
          <h1 id="navbar">Current Event</h1>
       </div>
       <div class="bs-component">
+         @if($currentevent->count() == 0)
+            <h3>There is no current event right now, click <a href="{{ route('addevent') }}">here</a> to add new event.</h3>
+         @endif
          @foreach ($currentevent as $event)
          <div class="">
             <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">

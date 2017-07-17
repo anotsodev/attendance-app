@@ -42,6 +42,9 @@
 		</div>
 		<div class="row">
 			<div class="bs-component">
+				@if($events->count() == 0)
+		            <h3>Click the "Add New Event" button to add new event.</h3>
+		        @endif
 				@foreach ($events as $event)
 				<div class="">
 					<div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
